@@ -1,5 +1,5 @@
 require 'httparty'
-Key = ""
+Key = File.read("API_KEY.txt").chomp
 Unit = "imperial"
 
 class GoogleMapper
@@ -39,4 +39,3 @@ g = GoogleMapper.new(origin, destination, Unit, Key)
 origin_to_destination = distance_parser(g)
 
 puts "Ok, so the distance between #{g.distance["origin_addresses"].to_s} and #{g.distance["destination_addresses"].to_s} is: #{origin_to_destination}"
-
