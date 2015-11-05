@@ -1,5 +1,5 @@
 require 'httparty'
-Key = "AIzaSyDgj3QvkHWmtugtk2kB3BQt3QNVBD51lDs"
+Key = ""
 Unit = "imperial"
 
 class GoogleMapper
