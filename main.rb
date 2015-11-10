@@ -1,8 +1,8 @@
 require 'httparty'
-Key = File.read("API_KEY.txt").chomp
-Unit = "imperial"
+Distance_Key = File.read("Distance_Key.txt").chomp
+Distance_Unit = "imperial"
 
-class GoogleMapper
+class DistanceMapper
     include HTTParty
     base_uri 'https://maps.googleapis.com'
 
@@ -34,7 +34,7 @@ puts ""
 destination = gets.to_s.chomp
 puts ""
 
-g = GoogleMapper.new(origin, destination, Unit, Key)
+g = DistanceMapper.new(origin, destination, Distance_Unit, Distance_Key)
 
 origin_to_destination = distance_parser(g)
 
